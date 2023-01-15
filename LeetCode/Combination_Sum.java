@@ -69,27 +69,27 @@ possible depth of the recursion tree is target.
 
 class SolutionCombination_Sum {
 
-    public void dfs(List<List<Integer>> res, int[] candidates, int i, List<Integer> curCombination, int curSum, int target){
+    public void dfs(List<List<Integer>> res, int[] candidates, int i, List<Integer> curCombination, int curSum, int target) {
         // Found a possible combination. Copy the combination and add it to res. We want a copy since we will add more
         // numbers to that list in future iterations that are not part of the current solution combination.
-        if(curSum == target){
+        if (curSum == target) {
             res.add(List.copyOf(curCombination));
             return;
         }
 
         // Impossible to make successful comb. since index is oob or current sum is bigger already than target.
-        if(i >= candidates.length || curSum > target){
+        if (i >= candidates.length || curSum > target) {
             return;
         }
 
         // Recursive step: Choose to include candidates[i] in current combination or not.
         curCombination.add(candidates[i]);
-        dfs(res, candidates, i, curCombination, curSum+candidates[i] , target);
+        dfs(res, candidates, i, curCombination, curSum + candidates[i], target);
         // Other decision: NOT include candidates[i], last element of the combination.
-        curCombination.remove(curCombination.size()-1);
+        curCombination.remove(curCombination.size() - 1);
 
         // Move on to the next number in candidates.
-        dfs(res, candidates, i+1, curCombination, curSum, target);
+        dfs(res, candidates, i + 1, curCombination, curSum, target);
     }
 
     public List<List<Integer>> combinationSum(int[] candidates, int target) {

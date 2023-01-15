@@ -23,8 +23,8 @@ the one being looped on. Linear complexity in time and constant complexity in sp
 public class ComplementaryDNA {
     public static String makeComplement(String dna) {
         StringBuilder res = new StringBuilder();
-        for(int i=0;i<dna.length();i++){
-            switch(dna.charAt(i)){
+        for (int i = 0; i < dna.length(); i++) {
+            switch (dna.charAt(i)) {
                 case 'A' -> {
                     res.append('T');
                 }
