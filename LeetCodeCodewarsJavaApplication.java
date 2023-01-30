@@ -1,9 +1,12 @@
+import CodeWars.BuildTower;
 import CodeWars.EqualSidesOfArray;
 import CodeWars.TakeATenMinuteWalk;
+
+import java.util.Arrays;
 
 public class LeetCodeCodewarsJavaApplication {
     public static void main(String[] args) {
         System.out.println("===================================== MAIN METHOD EXECUTING =====================================");
-        System.out.println(EqualSidesOfArray.findEvenIndex(new int[]{1, 2, 3, 4, 3, 2, 1}));
+        System.out.println(Arrays.toString(BuildTower.towerBuilder(3)));
     }
 }
