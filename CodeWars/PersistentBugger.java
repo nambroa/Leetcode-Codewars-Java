@@ -13,6 +13,23 @@ For example (Input --> Output):
 4 --> 0 (because 4 is already a one-digit number)
 
  */
+
+/*
+The idea for this is as follows:
+
+While n is not a single digit (greater or equal than 10) do:
+
+1) Get all digits of n and multiply them together
+For this we first cast the number to a string and get all digits -> O(N) * 2
+Then we multiply them -> O(N)
+
+2) Add one to the counter of needed multiplications to get to 1 digit -> O(1)
+
+Repeat for as many multiplications needed --> M
+
+Total complexity is M*O(N).
+ */
+
 public class PersistentBugger {
     public static int persistence(long n) {
         int res = 0;
