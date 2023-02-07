@@ -41,9 +41,9 @@ public class ValidAnagram {
     public boolean isAnagram(String s, String t) {
         Map<Character, Integer> letterCount = new HashMap<>();
         s.chars().forEach(c ->
-                letterCount.put((char) c, letterCount.getOrDefault((char) c, 0)+1));
+                letterCount.put((char) c, letterCount.getOrDefault((char) c, 0) + 1));
         t.chars().forEach(c ->
-                letterCount.put((char) c, letterCount.getOrDefault((char) c, 0)-1));
+                letterCount.put((char) c, letterCount.getOrDefault((char) c, 0) - 1));
 
         return letterCount.values().stream().noneMatch(count -> count != 0);
     }
