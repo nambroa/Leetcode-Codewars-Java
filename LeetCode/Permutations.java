@@ -42,7 +42,7 @@ import java.util.List;
  * array since the recursion stack is of length P.
  */
 
-class SolutionPermutations {
+class Permutations {
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
         List<Integer> numsL = Arrays.stream(nums).boxed().toList();

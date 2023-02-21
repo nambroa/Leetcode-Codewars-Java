@@ -67,7 +67,7 @@ number is 1, each step can reduce target by one, so in total we need to take tar
 possible depth of the recursion tree is target.
  */
 
-class SolutionCombination_Sum {
+class CombinationSum {
 
     public void dfs(List<List<Integer>> res, int[] candidates, int i, List<Integer> curCombination, int curSum, int target) {
         // Found a possible combination. Copy the combination and add it to res. We want a copy since we will add more
