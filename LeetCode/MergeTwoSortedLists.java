@@ -43,22 +43,15 @@ public class MergeTwoSortedLists {
         }
         // Get head of merged list, knowing that no list is empty.
         ListNode head = null;
-        ListNode temp = null;
         ListNode l3 = null;
         if (list1.val < list2.val) {
             head = list1;
             l3 = list1;
-            temp = list1.next;
-            list1.next = list2;
-
-            list1 = temp;
+            list1 = list1.next;
         } else {
             head = list2;
             l3 = list2;
-            temp = list2.next;
-            list2.next = list1;
-
-            list2 = temp;
+            list1 = list1.next;
         }
 
         // Make the rest of the merged list.
