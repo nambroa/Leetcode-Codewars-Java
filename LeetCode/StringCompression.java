@@ -84,6 +84,6 @@ public class StringCompression {
             chars[startIndex] = c;
         }
 
-        return startIndex+1;
+        return startIndex + 1;
     }
 }
